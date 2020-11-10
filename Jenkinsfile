@@ -1,19 +1,24 @@
 pipeline {
     agent any
   stages {
+  stage('GIT Checkout'){
+      steps{
+          echo "Checkout Successful"
+                    // Compile a Java file. This requires JDKconfiguration from Jenkins
+      }
+      }
     stage('Build'){
     steps{
-        echo "Hello, Pipeline!"
+        echo "Build Successful"
                   // Compile a Java file. This requires JDKconfiguration from Jenkins
-                  javac DevOpsAssnMnt.java
-                  // Execute the compiled Java binary called HelloWorld. This requires JDK configuration from Jenkins
-                  java DevOpsAssnMnt
-                  // Executes the Apache Maven commands, clean then package. This requires Apache Maven configuration from Jenkins
-                  mvn clean
-                  // List the files in current directory path by executing a default shell command
-                  sh "ls -ltr"
     }
     }
+    stage('Test'){
+        steps{
+            echo "Test Successful"
+                      // Compile a Java file. This requires JDKconfiguration from Jenkins
+        }
+        }
    // And next stages if you want to define further...
  } // End of stages
 } // End of pipeline
