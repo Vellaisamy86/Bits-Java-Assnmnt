@@ -7,18 +7,18 @@ pipeline {
                     // Compile a Java file. This requires JDKconfiguration from Jenkins
       }
       }
-    stage('Build'){
+    stage('Deploy'){
     steps{
-        echo "Build Successful"
+        echo "Deployment Successful"
                   // Compile a Java file. This requires JDKconfiguration from Jenkins
     }
     }
-    stage('Test'){
+    /*stage('Test'){
         steps{
             echo "Test Successful"
                       // Compile a Java file. This requires JDKconfiguration from Jenkins
         }
-        }
+        }*/
    // And next stages if you want to define further...
  } // End of stages
 } // End of pipeline
